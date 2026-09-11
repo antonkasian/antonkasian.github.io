@@ -18,7 +18,13 @@ $(function () {
 
     // Create walls - do not delete or modify this code
     createPlatform(-50, -50, canvas.width + 100, 50); // top wall
-    createPlatform(-50, canvas.height - 10, canvas.width + 100, 200, "rgb(118, 0, 233)"); // bottom wall
+    createPlatform(
+      -50,
+      canvas.height - 10,
+      canvas.width + 100,
+      200,
+      "rgb(118, 0, 233)",
+    ); // bottom wall
     createPlatform(-50, -50, 50, canvas.height + 500); // left wall
     createPlatform(canvas.width, -50, 50, canvas.height + 100); // right wall
 
@@ -27,28 +33,34 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-     toggleGrid();
-
+    //toggleGrid();
 
     // TODO 2 - Create Platforms
-createPlatform(250, 600, 50, 120, "blue");
-createPlatform(100, 700, 50, 75, "red");
-createPlatform(400, 600, 50, 75, "lime");
-createPlatform(800, 500, 50, 100, "yellow");
-createPlatform(1100, 450, 50, 100, "orange");
-createPlatform(600, 500, 50, 150, "purple");
-createPlatform(950, 500, 50, 100, "green");
+    createPlatform(250, 600, 50, 120, "blue");
+    createPlatform(100, 700, 50, 75, "red");
+    createPlatform(400, 600, 50, 75, "lime");
+    createPlatform(800, 500, 50, 100, "yellow");
+    createPlatform(1100, 500, 50, 100, "orange");
+    createPlatform(600, 500, 50, 150, "purple");
+    createPlatform(950, 550, 50, 100, "green");
+    createPlatform(1200, 420, 50, 30, "blue");
+    createPlatform(1250, 500, 50, 75, "yellow");
+    createPlatform(1000, 290, 50, 30, "red");
 
     // TODO 3 - Create Collectables
-createCollectable ("steve", 250, 550, 1, 0.7 )
-createCollectable ("diamond", 800, 300, 1, 0 )
-createCollectable ("steve", 400, 600, 1, 0.7 )
-    
+    createCollectable("star", 250, 500, 1, 0.7);
+    createCollectable("star2", 800, 300, 1, 0);
+    createCollectable("star3", 400, 500, 1, 0.7);
+    createCollectable("star4", 1000, 270);
+    createCollectable("star5", 1280, 470, 20, 0.5);
+
     // TODO 4 - Create Cannons
-createCannon("bottom", 600, 2000); 
-createCannon("right", 400, 2500);
-createCannon("bottom", 1400, 2000);     
-    
+    createCannon("bottom", 600, 2000);
+    createCannon("bottom", 1200, 3500);
+    createCannon("bottom", 1400, 2000);
+    createCannon("right", 300, 1500);
+    createCannon("left", 350, 6000);
+
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
     //////////////////////////////////
