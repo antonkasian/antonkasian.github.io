@@ -43,7 +43,7 @@ var init = function (window) {
 */
         // TODO 7 : Use a loop to create multiple circles
 
-    for (var i = 0; i < 50; i++) {
+    for (var i = 0; i < 100; i++) {
        drawCircle();   
     }
 
@@ -76,9 +76,9 @@ var init = function (window) {
              game.checkCirclePosition(circles[4]) // mkes the circle 5 to come back on the screen
             */
             // TODO 8 / TODO 9 : Iterate over the array
-            for(var i = 0; i < circles.lebgth; i++) {
+            for(var i = 0; i < circles.length; i++) {
                 physikz.updatePosition(circles[i]); // updates the position of a circle     
-                game.checkCirclePosition(circles[i]) // mkes the circle 1 to come back on the screen
+                game.checkCirclePosition(circles[i]) // makes the circle 1 to come back on the screen
             }
             
         }
@@ -93,7 +93,7 @@ var init = function (window) {
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
             var rightEdge = circle.x + circle.radius;
             var leftEdge = circle.x - circle.radius;
-            var bottomEdge = circle.x + circle.radius;
+            var bottomEdge = circle.y + circle.radius;
             var topEdge = circle.y - circle.radius;
 
             if ( leftEdge > canvas.width ) {
